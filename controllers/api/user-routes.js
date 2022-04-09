@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Character } = require('../../models');
-const {mainEmail} = require('../../utils/email')
+
 
 
 router.post('/', (req, res) => {
