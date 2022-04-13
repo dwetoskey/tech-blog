@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// create our Post model
+
 class Post extends Model {
   static upvote(body, models) {
     return models.Vote.create({
@@ -13,7 +13,7 @@ class Post extends Model {
         },
         attributes: [
           'id',
-          'post_url',
+          'blog',
           'title',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -45,7 +45,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    post_url: {
+    blog: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

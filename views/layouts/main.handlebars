@@ -6,23 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        body {
+        background-image: url('/images/background.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
 
     <title>Big Tech Blog</title>
 </head>
 <body>
     <header>
         
-        {{!-- {{> header }} --}}
+        {{> header }}
 
     </header>
 
     <main>
         {{{ body }}}
     </main>
-
-    <footer>
-
-    </footer>
 
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>

@@ -4,6 +4,7 @@ const postdata = [
     {
         title: 'Some Title',
         user_id: 10
+        
     }
 ];
 
